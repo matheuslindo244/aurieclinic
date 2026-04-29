@@ -12,7 +12,7 @@
 
 body{background:#fff;color:#333;}
 
-/* HERO NOVO */
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -28,17 +28,51 @@ max-width:500px;
 
 .hero-text h1{
 font-size:2.5rem;
+margin-bottom:10px;
+}
+
+.hero-text h2{
+font-size:1.3rem;
 margin-bottom:15px;
+color:#555;
 }
 
 .hero-text p{
 font-size:1.1rem;
-color:#555;
+color:#666;
 }
 
 .hero-img img{
 width:350px;
 border-radius:20px;
+}
+
+/* SECTIONS */
+section{
+padding:70px 10%;
+text-align:center;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta{
+background:#111;
+color:#fff;
 }
 
 /* RESPONSIVO */
@@ -47,6 +81,8 @@ border-radius:20px;
 flex-direction:column;
 text-align:center;
 gap:30px;
+height:auto;
+padding:50px 10%;
 }
 }
 
@@ -60,20 +96,19 @@ padding:15px;
 border-radius:50%;
 color:#fff;
 text-decoration:none;
+font-size:20px;
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- INICIO -->
 <section class="hero">
 
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
-
 <h2>Dra. Larissa Abreu: Harmonização Facial em Salvador</h2>
-
 <p>
 Realce sua beleza com naturalidade — atendimento humanizado pela Dra. Larissa Abreu, especialista em harmonização facial.
 </p>
@@ -85,7 +120,71 @@ Realce sua beleza com naturalidade — atendimento humanizado pela Dra. Larissa 
 
 </section>
 
-<a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
+<!-- SOBRE -->
+<section>
+<h2>Sobre a Dra. Larissa Abreu</h2>
+<p style="max-width:600px;margin:auto;">
+Especialista em harmonização facial, com foco em resultados naturais e atendimento humanizado. 
+Cada procedimento é realizado com segurança, técnica avançada e atenção aos detalhes.
+</p>
+</section>
+
+<!-- SERVIÇOS -->
+<section style="background:#f5f5f5;">
+<h2>Procedimentos</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Botox</h3>
+<p>Suaviza rugas e linhas de expressão.</p>
+</div>
+
+<div class="card">
+<h3>Preenchimento</h3>
+<p>Realce natural da beleza facial.</p>
+</div>
+
+<div class="card">
+<h3>Bioestimulador</h3>
+<p>Estimula colágeno e rejuvenescimento.</p>
+</div>
+
+</div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section>
+<h2>Experiência de clientes</h2>
+
+<div class="cards">
+
+<div class="card">
+<p>"Resultado incrível, fiquei muito satisfeita!"</p>
+</div>
+
+<div class="card">
+<p>"Atendimento impecável e super profissional."</p>
+</div>
+
+<div class="card">
+<p>"Mudou minha autoestima completamente."</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+<h2>Agende sua avaliação</h2>
+<p>Fale direto pelo WhatsApp</p>
+<a href="https://wa.me/5575981500468" style="background:#c9a96e;padding:12px 25px;border-radius:30px;color:#fff;text-decoration:none;">
+Agendar agora
+</a>
+</section>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5575981500468?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar" class="whatsapp">💬</a>
 
 </body>
 </html>
