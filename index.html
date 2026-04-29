@@ -12,64 +12,42 @@
 
 body{background:#fff;color:#333;}
 
-/* HERO */
-header{
+/* HERO NOVO */
+.hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1594824475317-4f3f2d8a0d5e') center/cover;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
+justify-content:space-between;
+padding:0 10%;
+background:#f9f9f9;
 }
 
-header h1{font-size:3rem;}
-header p{margin:15px 0;}
-
-.btn{
-background:#c9a96e;
-padding:12px 25px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
+.hero-text{
+max-width:500px;
 }
 
-/* SECTIONS */
-section{padding:70px 10%;text-align:center;}
-
-.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
-
-.card{
-background:#fff;
-padding:20px;
-border-radius:15px;
-width:280px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.hero-text h1{
+font-size:2.5rem;
+margin-bottom:15px;
 }
 
-/* SOBRE */
-.sobre{
-display:flex;
+.hero-text p{
+font-size:1.1rem;
+color:#555;
+}
+
+.hero-img img{
+width:350px;
+border-radius:20px;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+.hero{
 flex-direction:column;
-align-items:center;
+text-align:center;
+gap:30px;
 }
-
-.sobre img{
-width:180px;
-border-radius:50%;
-margin-bottom:20px;
-}
-
-/* DEPOIMENTOS */
-.depoimentos .card{
-font-style:italic;
-}
-
-/* CTA FINAL */
-.cta{
-background:#111;
-color:#fff;
 }
 
 /* WHATSAPP */
@@ -89,45 +67,25 @@ text-decoration:none;
 
 <body>
 
-<header>
-<div>
-<h1>Sua autoestima começa aqui</h1>
-<p>Resultados naturais e atendimento de alto padrão</p>
-<a href="https://wa.me/5575999999999" class="btn">Agendar agora</a>
-</div>
-</header>
+<section class="hero">
 
-<section class="sobre">
-<h2>Sobre mim</h2>
+<div class="hero-text">
+<h1>Harmonização Facial | Salvador</h1>
+
+<h2>Dra. Larissa Abreu: Harmonização Facial em Salvador</h2>
+
+<p>
+Realce sua beleza com naturalidade — atendimento humanizado pela Dra. Larissa Abreu, especialista em harmonização facial.
+</p>
+</div>
+
+<div class="hero-img">
 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2">
-<p>Especialista em estética avançada, com foco em resultados naturais e segurança para cada paciente.</p>
-</section>
-
-<section>
-<h2>O que eu faço</h2>
-<div class="cards">
-<div class="card"><h3>Botox</h3><p>Suaviza rugas e linhas.</p></div>
-<div class="card"><h3>Preenchimento</h3><p>Realce natural da beleza.</p></div>
-<div class="card"><h3>Bioestimulador</h3><p>Produção de colágeno.</p></div>
 </div>
+
 </section>
 
-<section class="depoimentos">
-<h2>Experiência de clientes</h2>
-<div class="cards">
-<div class="card">"Nunca me senti tão bem comigo mesma!"</div>
-<div class="card">"Resultado perfeito e natural."</div>
-<div class="card">"Atendimento impecável."</div>
-</div>
-</section>
-
-<section class="cta">
-<h2>Agende sua avaliação</h2>
-<p>Fale direto comigo no WhatsApp</p>
-<a href="https://wa.me/5575999999999" class="btn">Quero agendar</a>
-</section>
-
-<a href="https://wa.me/5575999999999" class="whatsapp">💬</a>
+<a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
 </body>
 </html>
