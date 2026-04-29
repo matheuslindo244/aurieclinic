@@ -22,37 +22,43 @@ padding:0 10%;
 background:#f9f9f9;
 }
 
-.hero-text{
-max-width:500px;
-}
+.hero-text{max-width:500px;}
 
-.hero-text h1{
-font-size:2.5rem;
-margin-bottom:10px;
-}
-
-.hero-text h2{
-font-size:1.3rem;
-margin-bottom:15px;
-color:#555;
-}
-
-.hero-text p{
-font-size:1.1rem;
-color:#666;
-}
+.hero-text h1{font-size:2.5rem;margin-bottom:10px;}
+.hero-text h2{font-size:1.3rem;margin-bottom:15px;color:#666;}
+.hero-text p{font-size:1.1rem;color:#777;}
 
 .hero-img img{
 width:350px;
 border-radius:20px;
+transition:0.4s;
+}
+
+.hero-img img:hover{
+transform:scale(1.05);
+}
+
+/* BOTÃO PREMIUM */
+.btn{
+background:#c9a96e;
+padding:12px 25px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* SECTIONS */
-section{
-padding:70px 10%;
-text-align:center;
-}
+section{padding:80px 10%;text-align:center;}
 
+/* CARDS */
 .cards{
 display:flex;
 gap:20px;
@@ -67,23 +73,30 @@ padding:20px;
 border-radius:15px;
 width:250px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ANTES/DEPOIS */
+.galeria{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.galeria img{
+width:250px;
+border-radius:15px;
 }
 
 /* CTA */
 .cta{
 background:#111;
 color:#fff;
-}
-
-/* RESPONSIVO */
-@media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:center;
-gap:30px;
-height:auto;
-padding:50px 10%;
-}
 }
 
 /* WHATSAPP */
@@ -98,93 +111,113 @@ color:#fff;
 text-decoration:none;
 font-size:20px;
 }
+
+/* ANIMAÇÃO */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+gap:30px;
+height:auto;
+padding:50px 10%;
+}
+}
 </style>
 </head>
 
 <body>
 
-<!-- INICIO -->
-<section class="hero">
-
+<!-- HERO -->
+<section class="hero hidden">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
-<h2>Dra. Larissa Abreu: Harmonização Facial em Salvador</h2>
-<p>
-Realce sua beleza com naturalidade — atendimento humanizado pela Dra. Larissa Abreu, especialista em harmonização facial.
-</p>
+<h2>Dra. Larissa Abreu</h2>
+<p>Realce sua beleza com naturalidade e segurança.</p>
+<a href="https://wa.me/5575981500468" class="btn">Agendar agora</a>
 </div>
 
 <div class="hero-img">
 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2">
 </div>
-
 </section>
 
 <!-- SOBRE -->
-<section>
-<h2>Sobre a Dra. Larissa Abreu</h2>
+<section class="hidden">
+<h2>Sobre</h2>
 <p style="max-width:600px;margin:auto;">
-Especialista em harmonização facial, com foco em resultados naturais e atendimento humanizado. 
-Cada procedimento é realizado com segurança, técnica avançada e atenção aos detalhes.
+Especialista em harmonização facial com foco em resultados naturais e atendimento humanizado.
 </p>
 </section>
 
 <!-- SERVIÇOS -->
-<section style="background:#f5f5f5;">
+<section class="hidden" style="background:#f5f5f5;">
 <h2>Procedimentos</h2>
 
 <div class="cards">
-
-<div class="card">
-<h3>Botox</h3>
-<p>Suaviza rugas e linhas de expressão.</p>
+<div class="card">Botox</div>
+<div class="card">Preenchimento</div>
+<div class="card">Bioestimulador</div>
 </div>
+</section>
 
-<div class="card">
-<h3>Preenchimento</h3>
-<p>Realce natural da beleza facial.</p>
-</div>
+<!-- ANTES / DEPOIS -->
+<section class="hidden">
+<h2>Resultados</h2>
 
-<div class="card">
-<h3>Bioestimulador</h3>
-<p>Estimula colágeno e rejuvenescimento.</p>
-</div>
-
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1594824475317-4f3f2d8a0d5e">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7b7c2a1f38">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 </div>
 </section>
 
 <!-- DEPOIMENTOS -->
-<section>
+<section class="hidden">
 <h2>Experiência de clientes</h2>
 
 <div class="cards">
-
-<div class="card">
-<p>"Resultado incrível, fiquei muito satisfeita!"</p>
-</div>
-
-<div class="card">
-<p>"Atendimento impecável e super profissional."</p>
-</div>
-
-<div class="card">
-<p>"Mudou minha autoestima completamente."</p>
-</div>
-
+<div class="card">"Resultado incrível!"</div>
+<div class="card">"Atendimento perfeito!"</div>
+<div class="card">"Amei tudo!"</div>
 </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta">
+<!-- CTA -->
+<section class="cta hidden">
 <h2>Agende sua avaliação</h2>
 <p>Fale direto pelo WhatsApp</p>
-<a href="https://wa.me/5575981500468" style="background:#c9a96e;padding:12px 25px;border-radius:30px;color:#fff;text-decoration:none;">
-Agendar agora
-</a>
+<a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
 </section>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- BOTÃO -->
 <a href="https://wa.me/5575981500468?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar" class="whatsapp">💬</a>
+
+<!-- SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+elements.forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
