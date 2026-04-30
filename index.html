@@ -94,6 +94,49 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 /* SECTIONS */
 section{padding:80px 10%;text-align:center;}
 
+/* FORMULÁRIO NOVO */
+.form-area{
+max-width:600px;
+margin:auto;
+text-align:left;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+margin-top:25px;
+}
+
+.form-area label{
+display:block;
+margin-top:15px;
+font-weight:600;
+color:#555;
+font-size:14px;
+}
+
+.form-area input,
+.form-area textarea{
+width:100%;
+padding:12px;
+margin-top:6px;
+border-radius:10px;
+border:1px solid #ddd;
+outline:none;
+font-family:Poppins;
+}
+
+.form-area textarea{
+resize:none;
+height:100px;
+}
+
+.form-area button{
+margin-top:20px;
+width:100%;
+border:none;
+cursor:pointer;
+}
+
 /* TRATAMENTOS */
 .tratamentos-grid{
 display:flex;
@@ -124,54 +167,6 @@ margin-bottom:8px;
 color:#666;
 font-size:14px;
 line-height:1.4;
-}
-
-/* PROVA SOCIAL */
-.depoimentos{
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:25px;
-align-items:center;
-}
-
-.depoimento{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-max-width:700px;
-text-align:left;
-}
-
-.depoimento p{
-color:#555;
-font-size:14px;
-line-height:1.5;
-}
-
-.meta{
-margin-top:8px;
-font-size:13px;
-color:#999;
-}
-
-.stats{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-justify-content:center;
-margin-top:40px;
-}
-
-.stat h2{
-color:#c9a96e;
-font-size:26px;
-}
-
-.stat p{
-font-size:13px;
-color:#777;
 }
 
 /* CTA */
@@ -236,130 +231,34 @@ gap:30px;
 </div>
 </section>
 
-<!-- SOBRE A DOUTORA (MANTIDO INTACTO) -->
+<!-- NOVA SEÇÃO ENCAIXADA -->
 <section class="hidden">
 
-<h2>Sobre a Doutora</h2>
+<h2>Dê o primeiro passo</h2>
 
-<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
+<h3 style="margin-top:10px;color:#c9a96e;">
+Agende sua Avaliação Personalizada
+</h3>
 
-<h3 style="color:#c9a96e;margin-bottom:10px;">Dra. Larissa Abreu</h3>
-
-<p>
-Médica especialista em harmonização facial, a Dra. Larissa Abreu dedica-se a realçar a beleza natural de cada paciente com técnicas inovadoras e resultados harmoniosos.
+<p style="max-width:600px;margin:10px auto;color:#666;">
+Preencha abaixo e nossa equipe entrará em contato pelo WhatsApp para agendar sua consulta com a Dra. Larissa Abreu.
 </p>
 
-<p style="margin-top:10px;">
-Formada em Medicina pela UFBA — CRM-BA 32176
-</p>
+<div class="form-area">
 
-<p style="margin-top:15px;font-weight:600;color:#333;">
-Saiba mais sobre a Dra. Larissa →
-</p>
+<label>Nome *</label>
+<input type="text" placeholder="Seu nome completo">
 
-</div>
+<label>WhatsApp *</label>
+<input type="text" placeholder="(00) 00000-0000">
 
-<div class="tratamentos-grid">
+<label>O que deseja melhorar?</label>
+<textarea placeholder="Ex: rugas, volume labial, contorno facial..."></textarea>
 
-<div class="tratamento">
-<h4>⭐ Especialista</h4>
-<p>Especialista em face</p>
-</div>
+<a href="https://wa.me/5575981500468?text=Quero%20minha%20melhor%20vers%C3%A3o" class="btn">
+Quero minha melhor versão
+</a>
 
-<div class="tratamento">
-<h4>💙 Cuidado</h4>
-<p>Atendimento humanizado e personalizado</p>
-</div>
-
-<div class="tratamento">
-<h4>✨ Inovação</h4>
-<p>Tecnologia de ponta em cada procedimento</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- TRATAMENTOS -->
-<section class="hidden">
-<h2>Tratamentos</h2>
-
-<div class="tratamentos-grid">
-
-<div class="tratamento">
-<h4>Harmonização Facial</h4>
-<p>Equilíbrio e proporção para um rosto naturalmente harmonioso.</p>
-</div>
-
-<div class="tratamento">
-<h4>Fios de PDO</h4>
-<p>Sustentação e rejuvenescimento com técnicas minimamente invasivas.</p>
-</div>
-
-<div class="tratamento">
-<h4>Preenchimento</h4>
-<p>Volume e contorno com ácido hialurônico de alta qualidade.</p>
-</div>
-
-<div class="tratamento">
-<h4>Toxina Botulínica</h4>
-<p>Suavização de linhas de expressão com resultado natural.</p>
-</div>
-
-<div class="tratamento">
-<h4>Bioestimuladores</h4>
-<p>Estímulo à produção natural de colágeno.</p>
-</div>
-
-</div>
-</section>
-
-<!-- PROVA SOCIAL -->
-<section class="hidden">
-
-<h2>Prova Social</h2>
-
-<p style="color:#777;margin-top:10px;">Resultados que falam por si</p>
-
-<p style="font-weight:600;margin-top:10px;">
-+500 pacientes confiam na Dra. Larissa Abreu • Nota 5.0 no Google
-</p>
-
-<div class="depoimentos">
-
-<div class="depoimento">
-<p>"Resultado incrível e super natural! Me sinto muito mais confiante."</p>
-<div class="meta">Carolina S. • Salvador - BA</div>
-</div>
-
-<div class="depoimento">
-<p>"Atendimento impecável do início ao fim."</p>
-<div class="meta">Fernanda M. • Salvador - BA</div>
-</div>
-
-<div class="depoimento">
-<p>"Minha pele rejuvenesceu anos!"</p>
-<div class="meta">Juliana R. • Feira de Santana - BA</div>
-</div>
-
-</div>
-
-<div class="stats">
-<div>
-<h2>+500</h2><p>Pacientes</p>
-</div>
-
-<div>
-<h2>5.0</h2><p>Google</p>
-</div>
-
-<div>
-<h2>+200</h2><p>Avaliações</p>
-</div>
-
-<div>
-<h2>10+</h2><p>Anos exp.</p>
-</div>
 </div>
 
 </section>
