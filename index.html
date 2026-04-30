@@ -50,28 +50,28 @@ padding:0 10%;
 
 /* FOTO DOUTORA */
 .foto-doutora{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .foto-doutora::before{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:470px;
-  background:linear-gradient(135deg,#d4af37,#f5e6a0);
-  border-radius:25px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.25);
-  z-index:1;
+content:"";
+position:absolute;
+width:420px;
+height:470px;
+background:linear-gradient(135deg,#d4af37,#f5e6a0);
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,0.25);
+z-index:1;
 }
 
 .foto-doutora img{
-  width:350px;
-  border-radius:20px;
-  position:relative;
-  z-index:2;
+width:350px;
+border-radius:20px;
+position:relative;
+z-index:2;
 }
 
 /* BOTÃO */
@@ -91,24 +91,8 @@ transform:translateY(-3px);
 box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 section{padding:80px 10%;text-align:center;}
-
-/* GALERIA */
-.galeria{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.galeria img{
-width:250px;
-border-radius:15px;
-transition:0.4s;
-}
-
-.galeria img:hover{transform:scale(1.08);}
 
 /* CARDS */
 .cards{
@@ -130,81 +114,30 @@ transition:0.3s;
 
 .card:hover{transform:translateY(-5px);}
 
-/* AVALIAÇÕES CARROSSEL */
-.carousel{
-position:relative;
-max-width:600px;
-margin:30px auto;
-overflow:hidden;
+/* GALERIA */
+.galeria{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.carousel-item{
-display:none;
-padding:25px;
-background:#fff;
+.galeria img{
+width:250px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.carousel-item.active{
-display:block;
-animation:fade 0.6s ease;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(10px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-/* STARS */
+/* AVALIAÇÕES */
 .stars{
 color:#f5c542;
-margin-bottom:10px;
+margin-bottom:5px;
 }
 
 /* CONTADOR */
 .counter{
-font-size:2.2rem;
+font-size:2.5rem;
 font-weight:600;
 color:#c9a96e;
-margin:10px 0;
-}
-
-/* BEFORE AFTER SLIDER */
-.ba{
-position:relative;
-width:320px;
-height:320px;
-overflow:hidden;
-border-radius:20px;
-margin:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.ba img{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.ba input{
-position:absolute;
-width:100%;
-height:100%;
-opacity:0;
-cursor:ew-resize;
-z-index:3;
-}
-
-.ba .after{
-clip-path: inset(0 50% 0 0);
-}
-
-/* CTA */
-.cta{
-background:#111;
-color:#fff;
 }
 
 /* WHATSAPP */
@@ -231,6 +164,12 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* CTA */
+.cta{
+background:#111;
+color:#fff;
+}
+
 /* RESPONSIVO */
 @media(max-width:900px){
 .hero{
@@ -244,11 +183,13 @@ gap:30px;
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
 <div class="logo">Aurie Clinic</div>
 <a href="https://wa.me/5575981500468" class="btn">WhatsApp</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero hidden">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
@@ -262,94 +203,80 @@ gap:30px;
 </div>
 </section>
 
-<!-- CONTADOR -->
+<!-- SOBRE DOUTORA (MANTIDO COMPLETO) -->
 <section class="hidden">
-<h2>Pacientes atendidos</h2>
-<div class="counter" id="counter">0</div>
-<p>Resultados naturais e seguros</p>
+<h2>Sobre a Doutora</h2>
+
+<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
+<h3 style="color:#c9a96e;">Dra. Larissa Abreu</h3>
+
+<p>Médica especialista em harmonização facial, dedicada a realçar a beleza natural com segurança e precisão.</p>
+
+<p>Formada em Medicina pela UFBA — CRM-BA 32176</p>
+</div>
+
+<div class="cards">
+<div class="card">⭐ Especialista em face</div>
+<div class="card">💙 Atendimento humanizado</div>
+<div class="card">✨ Tecnologia avançada</div>
+</div>
 </section>
 
-<!-- AVALIAÇÕES CARROSSEL -->
+<!-- RESULTADOS -->
+<section class="hidden">
+<h2>Resultados</h2>
+
+<div class="galeria">
+<img src="https://picsum.photos/400/300?1">
+<img src="https://picsum.photos/400/300?2">
+<img src="https://picsum.photos/400/300?3">
+</div>
+</section>
+
+<!-- AVALIAÇÕES -->
 <section class="hidden">
 <h2>Avaliações</h2>
 
-<div class="carousel">
+<div class="cards">
 
-<div class="carousel-item active">
+<div class="card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Resultado perfeito e muito natural."</p>
+<p>"Resultado perfeito e natural."</p>
+<strong>Juliana</strong>
 </div>
 
-<div class="carousel-item">
+<div class="card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Atendimento impecável do início ao fim."</p>
+<p>"Atendimento excelente."</p>
+<strong>Marcos</strong>
 </div>
 
-<div class="carousel-item">
+<div class="card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Fiquei muito satisfeito com o resultado."</p>
+<p>"Muito profissional."</p>
+<strong>Camila</strong>
 </div>
 
 </div>
-
-<a href="https://wa.me/5575981500468?text=Quero%20avaliar%20o%20atendimento" class="btn">
-Avaliar no WhatsApp
-</a>
-
 </section>
 
-<!-- BEFORE AFTER -->
-<section class="hidden">
-<h2>Antes e Depois</h2>
-
-<div class="ba">
-<img src="https://picsum.photos/600/600?random=1">
-<img class="after" src="https://picsum.photos/600/600?random=2">
-<input type="range" min="0" max="100" value="50" oninput="document.querySelector('.after').style.clipPath='inset(0 '+this.value+'% 0 0)'">
-</div>
-
-</section>
-
+<!-- CTA -->
 <section class="cta hidden">
 <h2>Agende sua avaliação</h2>
 <a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
 </section>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
 <script>
-// ANIMAÇÃO SCROLL
 const elements=document.querySelectorAll('.hidden');
 const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting)entry.target.classList.add('show');
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add('show');
 });
 });
 elements.forEach(el=>observer.observe(el));
-
-// CARROSSEL
-let index=0;
-const items=document.querySelectorAll('.carousel-item');
-
-setInterval(()=>{
-items[index].classList.remove('active');
-index=(index+1)%items.length;
-items[index].classList.add('active');
-},3000);
-
-// CONTADOR
-let count=0;
-const counter=document.getElementById("counter");
-const target=327;
-
-function update(){
-if(count<target){
-count++;
-counter.innerText="+"+count;
-requestAnimationFrame(update);
-}
-}
-update();
 </script>
 
 </body>
