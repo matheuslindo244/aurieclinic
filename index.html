@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aurie Clinic</title>
 
+<!-- SEO -->
+<meta name="description" content="Harmonização facial em Salvador com resultados naturais. Aurie Clinic - Dra. Juliane Mohamed. Atendimento humanizado e técnicas avançadas.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
 
-html{scroll-behavior:smooth;}
-
 body{background:#fff;color:#333;}
 
-/* NAV */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
@@ -34,26 +35,6 @@ font-size:1.2rem;
 color:#c9a96e;
 }
 
-.nav-links{
-display:flex;
-gap:18px;
-font-size:14px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#333;
-}
-
-/* BOTÃO */
-.btn{
-background:#c9a96e;
-padding:12px 25px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
-}
-
 /* HERO */
 .hero{
 margin-top:80px;
@@ -66,40 +47,63 @@ padding:0 10%;
 
 .hero-text{max-width:500px;}
 
-/* FOTO */
+.hero-text h1{font-size:2.5rem;}
+.hero-text h2{font-size:1.2rem;color:#777;margin:10px 0;}
+.hero-text p{color:#666;}
+
+/* FOTO DOUTORA */
 .foto-doutora{
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .foto-doutora::before{
-content:"";
-position:absolute;
-width:420px;
-height:470px;
-background:linear-gradient(135deg,#d4af37,#f5e6a0);
-border-radius:25px;
-z-index:1;
+  content:"";
+  position:absolute;
+  width:420px;
+  height:470px;
+  background:linear-gradient(135deg,#d4af37,#f5e6a0);
+  border-radius:25px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+  z-index:1;
 }
 
 .foto-doutora img{
-width:350px;
-border-radius:20px;
-position:relative;
-z-index:2;
+  width:350px;
+  border-radius:20px;
+  position:relative;
+  z-index:2;
 }
 
-/* SEÇÕES */
+/* BOTÃO */
+.btn{
+background:#c9a96e;
+padding:12px 25px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
 section{padding:80px 10%;text-align:center;}
 
-/* GRID */
+/* TRATAMENTOS */
 .tratamentos-grid{
 display:flex;
 flex-wrap:wrap;
 gap:20px;
 justify-content:center;
+margin-top:30px;
 }
 
 .tratamento{
@@ -108,6 +112,51 @@ padding:25px;
 border-radius:15px;
 width:260px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:left;
+transition:0.3s;
+}
+
+.tratamento:hover{transform:translateY(-5px);}
+
+.tratamento h4{color:#c9a96e;margin-bottom:8px;}
+.tratamento p{color:#666;font-size:14px;line-height:1.4;}
+
+/* PROVA SOCIAL */
+.depoimentos{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:25px;
+align-items:center;
+}
+
+.depoimento{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+max-width:700px;
+text-align:left;
+}
+
+.depoimento p{color:#555;font-size:14px;line-height:1.5;}
+.meta{margin-top:8px;font-size:13px;color:#999;}
+
+.stats{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+
+.stat h2{color:#c9a96e;font-size:26px;}
+.stat p{font-size:13px;color:#777;}
+
+/* CTA */
+.cta{
+background:#111;
+color:#fff;
 }
 
 /* WHATSAPP */
@@ -119,172 +168,213 @@ background:#25d366;
 padding:15px;
 border-radius:50%;
 color:#fff;
-}
-
-/* BOTÃO FLUTUANTE */
-.smart-btn{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#c9a96e;
-color:#fff;
-padding:12px 18px;
-border-radius:30px;
 text-decoration:none;
-opacity:0;
-transform:translateY(20px);
-transition:0.4s;
-pointer-events:none;
-z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+animation:pulse 1.5s infinite;
 }
 
-.smart-btn.show{
-opacity:1;
-transform:translateY(0);
-pointer-events:auto;
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
 }
 
 /* ANIMAÇÃO */
-.hidden{opacity:0;transform:translateY(40px);transition:0.8s;}
-.show{opacity:1;transform:translateY(0);}
-
-/* BEFORE AFTER */
-.compare{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:30px;
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
 }
 
-.compare img{
-width:250px;
-border-radius:10px;
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
-/* FORM */
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:1px solid #ddd;
-border-radius:10px;
-}
-
+/* RESPONSIVO */
 @media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-.nav-links{display:none;}
+.hero{
+flex-direction:column;
+text-align:center;
+gap:30px;
+}
+
+.tratamentos-grid{
+flex-direction:column;
+align-items:center;
+}
+
+.foto-doutora::before{
+width:300px;
+height:350px;
+}
+
+.foto-doutora img{
+width:260px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <div class="logo">Aurie Clinic</div>
-
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#sobre">Sobre</a>
-<a href="#tratamentos">Tratamentos</a>
-<a href="#depoimentos">Depoimentos</a>
-<a href="#contato">Contato</a>
-</div>
-
-<a href="https://wa.me/5575981500468?text=Olá! Quero agendar minha avaliação" class="btn">Agendar</a>
+<a href="https://wa.me/5575981500468" class="btn">WhatsApp</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero hidden" id="home">
+<section class="hero hidden">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
-<p>Realce sua beleza com naturalidade.</p>
-<a href="#contato" class="btn">Agendar agora</a>
+<h2>Dra. Juliane Mohamed</h2>
+<p>Realce sua beleza com naturalidade e segurança.</p>
+<p>Atendimento: Caminho das Árvores | Feira de Santana.</p>
+<a href="https://wa.me/5575981500468" class="btn">Agendar agora</a>
 </div>
 
 <div class="foto-doutora">
-<img src="https://i.postimg.cc/02khZ0x6/images.jpg">
+<img src="https://i.postimg.cc/02khZ0x6/images.jpg" alt="Doutora">
 </div>
 </section>
 
-<!-- SOBRE -->
-<section class="hidden" id="sobre">
-<h2>Sobre</h2>
-<p>Especialista em harmonização facial com foco em naturalidade.</p>
-</section>
+<section class="hidden">
+<h2>Sobre a Doutora</h2>
 
-<!-- TRATAMENTOS -->
-<section class="hidden" id="tratamentos">
-<h2>Tratamentos</h2>
+<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
+
+<h3 style="color:#c9a96e;margin-bottom:10px;">Dra. Larissa Abreu</h3>
+
+<p>
+Médica especialista em harmonização facial, a Dra. Larissa Abreu dedica-se a realçar a beleza natural de cada paciente com técnicas inovadoras e resultados harmoniosos.
+</p>
+
+<p style="margin-top:10px;">
+Formada em Medicina pela UFBA — CRM-BA 32176
+</p>
+
+<p style="margin-top:15px;font-weight:600;color:#333;">
+Saiba mais sobre a Dra. Larissa →
+</p>
+
+</div>
+
 <div class="tratamentos-grid">
-<div class="tratamento">Harmonização Facial</div>
-<div class="tratamento">Preenchimento</div>
-<div class="tratamento">Botox</div>
+
+<div class="tratamento">
+<h4>⭐ Especialista</h4>
+<p>Especialista em face</p>
+</div>
+
+<div class="tratamento">
+<h4>💙 Cuidado</h4>
+<p>Atendimento humanizado e personalizado</p>
+</div>
+
+<div class="tratamento">
+<h4>✨ Inovação</h4>
+<p>Tecnologia de ponta em cada procedimento</p>
+</div>
+
 </div>
 </section>
 
-<!-- BEFORE AFTER -->
 <section class="hidden">
-<h2>Antes e Depois</h2>
+<h2>Tratamentos</h2>
 
-<div class="compare">
-<img src="https://i.imgur.com/8Km9tLL.jpg">
-<img src="https://i.imgur.com/1Q9Z1Zb.jpg">
+<div class="tratamentos-grid">
+
+<div class="tratamento">
+<h4>Harmonização Facial</h4>
+<p>Equilíbrio e proporção para um rosto naturalmente harmonioso.</p>
+</div>
+
+<div class="tratamento">
+<h4>Fios de PDO</h4>
+<p>Sustentação e rejuvenescimento com técnicas minimamente invasivas.</p>
+</div>
+
+<div class="tratamento">
+<h4>Preenchimento</h4>
+<p>Volume e contorno com ácido hialurônico de alta qualidade.</p>
+</div>
+
+<div class="tratamento">
+<h4>Toxina Botulínica</h4>
+<p>Suavização de linhas de expressão com resultado natural.</p>
+</div>
+
+<div class="tratamento">
+<h4>Bioestimuladores</h4>
+<p>Estímulo à produção natural de colágeno.</p>
+</div>
+
 </div>
 </section>
 
-<!-- FORM -->
-<section class="hidden" id="contato">
-<h2>Agende sua consulta</h2>
-
-<input id="nome" placeholder="Nome">
-<input id="tel" placeholder="WhatsApp">
-<textarea id="msg" placeholder="Mensagem"></textarea>
-
-<button class="btn" onclick="enviar()">Enviar WhatsApp</button>
-</section>
-
-<!-- CTA -->
 <section class="hidden">
-<h2>Pronto pra agendar?</h2>
-<a href="https://wa.me/5575981500468" class="btn">Falar no WhatsApp</a>
+
+<h2>Prova Social</h2>
+
+<p style="color:#777;margin-top:10px;">Resultados que falam por si</p>
+
+<p style="font-weight:600;margin-top:10px;">
++500 pacientes confiam na Dra. Larissa Abreu • Nota 5.0 no Google
+</p>
+
+<div class="depoimentos">
+
+<div class="depoimento">
+<p>"Resultado incrível e super natural! Me sinto muito mais confiante."</p>
+<div class="meta">Carolina S. • Salvador - BA</div>
+</div>
+
+<div class="depoimento">
+<p>"Atendimento impecável do início ao fim."</p>
+<div class="meta">Fernanda M. • Salvador - BA</div>
+</div>
+
+<div class="depoimento">
+<p>"Minha pele rejuvenesceu anos!"</p>
+<div class="meta">Juliana R. • Feira de Santana - BA</div>
+</div>
+
+</div>
+
+<div class="stats">
+<div>
+<h2>+500</h2><p>Pacientes</p>
+</div>
+
+<div>
+<h2>5.0</h2><p>Google</p>
+</div>
+
+<div>
+<h2>+200</h2><p>Avaliações</p>
+</div>
+
+<div>
+<h2>10+</h2><p>Anos exp.</p>
+</div>
+</div>
+
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5575981500468?text=Olá! Quero agendar" class="whatsapp">💬</a>
+<section class="cta hidden">
+<h2>Agende sua avaliação</h2>
+<a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
+</section>
 
-<!-- BOTÃO FLUTUANTE -->
-<a href="#contato" class="smart-btn">Agendar agora</a>
+<a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
 <script>
-
-// animação scroll
-const els=document.querySelectorAll('.hidden');
-const obs=new IntersectionObserver(e=>{
-e.forEach(x=>{
-if(x.isIntersecting)x.target.classList.add('show');
+const elements=document.querySelectorAll('.hidden');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting)entry.target.classList.add('show');
 });
 });
-els.forEach(e=>obs.observe(e));
-
-// botão flutuante
-const btn=document.querySelector('.smart-btn');
-window.addEventListener('scroll',()=>{
-btn.classList.toggle('show',window.scrollY>400);
-});
-
-// whatsapp form
-function enviar(){
-let n=document.getElementById("nome").value;
-let t=document.getElementById("tel").value;
-let m=document.getElementById("msg").value;
-
-let url=`https://wa.me/5575981500468?text=Nome:%20${n}%0ATel:%20${t}%0AMensagem:%20${m}`;
-
-window.open(url,'_blank');
-}
-
+elements.forEach(el=>observer.observe(el));
 </script>
 
 </body>
