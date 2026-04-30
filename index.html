@@ -126,17 +126,52 @@ font-size:14px;
 line-height:1.4;
 }
 
-/* GALERIA */
-.galeria{
+/* PROVA SOCIAL */
+.depoimentos{
 display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+flex-direction:column;
+gap:15px;
+margin-top:25px;
+align-items:center;
 }
 
-.galeria img{
-width:250px;
+.depoimento{
+background:#fff;
+padding:20px;
 border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+max-width:700px;
+text-align:left;
+}
+
+.depoimento p{
+color:#555;
+font-size:14px;
+line-height:1.5;
+}
+
+.meta{
+margin-top:8px;
+font-size:13px;
+color:#999;
+}
+
+.stats{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+
+.stat h2{
+color:#c9a96e;
+font-size:26px;
+}
+
+.stat p{
+font-size:13px;
+color:#777;
 }
 
 /* CTA */
@@ -155,67 +190,6 @@ padding:15px;
 border-radius:50%;
 color:#fff;
 text-decoration:none;
-}
-
-/* PROVA SOCIAL (NOVA AVALIAÇÃO PREMIUM) */
-.prova-social{
-text-align:left;
-max-width:900px;
-margin:auto;
-}
-
-.prova-social h3{
-color:#c9a96e;
-margin-top:10px;
-}
-
-.depoimentos{
-display:flex;
-flex-direction:column;
-gap:20px;
-margin-top:30px;
-}
-
-.depoimento{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.depoimento p{
-font-size:14px;
-color:#555;
-line-height:1.5;
-}
-
-.meta{
-margin-top:10px;
-font-size:13px;
-color:#999;
-}
-
-/* NÚMEROS */
-.stats{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.stat{
-text-align:center;
-}
-
-.stat h2{
-color:#c9a96e;
-font-size:28px;
-}
-
-.stat p{
-font-size:13px;
-color:#777;
 }
 
 /* ANIMAÇÃO */
@@ -262,6 +236,51 @@ gap:30px;
 </div>
 </section>
 
+<!-- SOBRE A DOUTORA (MANTIDO INTACTO) -->
+<section class="hidden">
+
+<h2>Sobre a Doutora</h2>
+
+<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
+
+<h3 style="color:#c9a96e;margin-bottom:10px;">Dra. Larissa Abreu</h3>
+
+<p>
+Médica especialista em harmonização facial, a Dra. Larissa Abreu dedica-se a realçar a beleza natural de cada paciente com técnicas inovadoras e resultados harmoniosos.
+</p>
+
+<p style="margin-top:10px;">
+Formada em Medicina pela UFBA — CRM-BA 32176
+</p>
+
+<p style="margin-top:15px;font-weight:600;color:#333;">
+Saiba mais sobre a Dra. Larissa →
+</p>
+
+</div>
+
+<div class="tratamentos-grid">
+
+<div class="tratamento">
+<h4>⭐ Especialista</h4>
+<p>Especialista em face</p>
+</div>
+
+<div class="tratamento">
+<h4>💙 Cuidado</h4>
+<p>Atendimento humanizado e personalizado</p>
+</div>
+
+<div class="tratamento">
+<h4>✨ Inovação</h4>
+<p>Tecnologia de ponta em cada procedimento</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRATAMENTOS -->
 <section class="hidden">
 <h2>Tratamentos</h2>
 
@@ -289,69 +308,57 @@ gap:30px;
 
 <div class="tratamento">
 <h4>Bioestimuladores</h4>
-<p>Estímulo à produção de colágeno para firmeza e viço.</p>
+<p>Estímulo à produção natural de colágeno.</p>
 </div>
 
 </div>
 </section>
 
-<!-- PROVA SOCIAL NOVA -->
+<!-- PROVA SOCIAL -->
 <section class="hidden">
 
 <h2>Prova Social</h2>
+
 <p style="color:#777;margin-top:10px;">Resultados que falam por si</p>
-<p style="margin-top:10px;font-weight:600;">
-Mais de 500 pacientes confiam na Dra. Larissa Abreu. Nota 5.0 no Google.
+
+<p style="font-weight:600;margin-top:10px;">
++500 pacientes confiam na Dra. Larissa Abreu • Nota 5.0 no Google
 </p>
 
 <div class="depoimentos">
 
 <div class="depoimento">
 <p>"Resultado incrível e super natural! Me sinto muito mais confiante."</p>
-<div class="meta">Carolina S. • Harmonização Facial • Salvador - BA</div>
+<div class="meta">Carolina S. • Salvador - BA</div>
 </div>
 
 <div class="depoimento">
-<p>"Meus lábios ficaram perfeitos, exatamente como eu queria."</p>
-<div class="meta">Fernanda M. • Preenchimento Labial • Salvador - BA</div>
+<p>"Atendimento impecável do início ao fim."</p>
+<div class="meta">Fernanda M. • Salvador - BA</div>
 </div>
 
 <div class="depoimento">
-<p>"Minha pele rejuvenesceu anos, atendimento impecável."</p>
-<div class="meta">Juliana R. • Toxina Botulínica • Feira de Santana - BA</div>
-</div>
-
-<div class="depoimento">
-<p>"Resultado progressivo e lindo depois do bioestimulador."</p>
-<div class="meta">Patrícia L. • Bioestimulador • Salvador - BA</div>
-</div>
-
-<div class="depoimento">
-<p>"Efeito imediato e natural com fios de PDO."</p>
-<div class="meta">Amanda C. • Fios de PDO • Feira de Santana - BA</div>
+<p>"Minha pele rejuvenesceu anos!"</p>
+<div class="meta">Juliana R. • Feira de Santana - BA</div>
 </div>
 
 </div>
 
 <div class="stats">
-<div class="stat">
-<h2>+500</h2>
-<p>Pacientes atendidas</p>
+<div>
+<h2>+500</h2><p>Pacientes</p>
 </div>
 
-<div class="stat">
-<h2>5.0</h2>
-<p>Nota no Google</p>
+<div>
+<h2>5.0</h2><p>Google</p>
 </div>
 
-<div class="stat">
-<h2>+200</h2>
-<p>Avaliações 5 estrelas</p>
+<div>
+<h2>+200</h2><p>Avaliações</p>
 </div>
 
-<div class="stat">
-<h2>10+</h2>
-<p>Anos de experiência</p>
+<div>
+<h2>10+</h2><p>Anos exp.</p>
 </div>
 </div>
 
