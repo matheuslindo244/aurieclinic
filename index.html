@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aurie Clinic</title>
 
+<!-- SEO -->
+<meta name="description" content="Harmonização facial em Salvador com resultados naturais. Aurie Clinic - Dra. Juliane Mohamed. Atendimento humanizado e técnicas avançadas.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -115,16 +118,8 @@ transition:0.3s;
 
 .tratamento:hover{transform:translateY(-5px);}
 
-.tratamento h4{
-color:#c9a96e;
-margin-bottom:8px;
-}
-
-.tratamento p{
-color:#666;
-font-size:14px;
-line-height:1.4;
-}
+.tratamento h4{color:#c9a96e;margin-bottom:8px;}
+.tratamento p{color:#666;font-size:14px;line-height:1.4;}
 
 /* PROVA SOCIAL */
 .depoimentos{
@@ -144,17 +139,8 @@ max-width:700px;
 text-align:left;
 }
 
-.depoimento p{
-color:#555;
-font-size:14px;
-line-height:1.5;
-}
-
-.meta{
-margin-top:8px;
-font-size:13px;
-color:#999;
-}
+.depoimento p{color:#555;font-size:14px;line-height:1.5;}
+.meta{margin-top:8px;font-size:13px;color:#999;}
 
 .stats{
 display:flex;
@@ -164,15 +150,8 @@ justify-content:center;
 margin-top:40px;
 }
 
-.stat h2{
-color:#c9a96e;
-font-size:26px;
-}
-
-.stat p{
-font-size:13px;
-color:#777;
-}
+.stat h2{color:#c9a96e;font-size:26px;}
+.stat p{font-size:13px;color:#777;}
 
 /* CTA */
 .cta{
@@ -190,6 +169,14 @@ padding:15px;
 border-radius:50%;
 color:#fff;
 text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
 }
 
 /* ANIMAÇÃO */
@@ -210,6 +197,20 @@ transform:translateY(0);
 flex-direction:column;
 text-align:center;
 gap:30px;
+}
+
+.tratamentos-grid{
+flex-direction:column;
+align-items:center;
+}
+
+.foto-doutora::before{
+width:300px;
+height:350px;
+}
+
+.foto-doutora img{
+width:260px;
 }
 }
 </style>
@@ -236,9 +237,7 @@ gap:30px;
 </div>
 </section>
 
-<!-- SOBRE A DOUTORA (MANTIDO INTACTO) -->
 <section class="hidden">
-
 <h2>Sobre a Doutora</h2>
 
 <div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
@@ -277,10 +276,8 @@ Saiba mais sobre a Dra. Larissa →
 </div>
 
 </div>
-
 </section>
 
-<!-- TRATAMENTOS -->
 <section class="hidden">
 <h2>Tratamentos</h2>
 
@@ -314,7 +311,6 @@ Saiba mais sobre a Dra. Larissa →
 </div>
 </section>
 
-<!-- PROVA SOCIAL -->
 <section class="hidden">
 
 <h2>Prova Social</h2>
