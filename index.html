@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aurie Clinic</title>
 
-<meta name="description" content="Harmonização facial em Salvador com resultados naturais. Aurie Clinic - Dra. Juliane Mohamed.">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -39,32 +37,21 @@ color:#c9a96e;
 .nav-links{
 display:flex;
 gap:18px;
-align-items:center;
 font-size:14px;
 }
 
 .nav-links a{
 text-decoration:none;
 color:#333;
-transition:0.3s;
-position:relative;
 }
 
-.nav-links a:hover{
-color:#c9a96e;
-}
-
-/* destaque seção ativa */
-.nav-links a.active{
-color:#c9a96e;
-font-weight:600;
-}
-
-/* MENU MOBILE */
-.menu-toggle{
-display:none;
-font-size:22px;
-cursor:pointer;
+/* BOTÃO */
+.btn{
+background:#c9a96e;
+padding:12px 25px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
 }
 
 /* HERO */
@@ -78,10 +65,6 @@ padding:0 10%;
 }
 
 .hero-text{max-width:500px;}
-
-.hero-text h1{font-size:2.5rem;}
-.hero-text h2{font-size:1.2rem;color:#777;margin:10px 0;}
-.hero-text p{color:#666;}
 
 /* FOTO */
 .foto-doutora{
@@ -98,7 +81,6 @@ width:420px;
 height:470px;
 background:linear-gradient(135deg,#d4af37,#f5e6a0);
 border-radius:25px;
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
 z-index:1;
 }
 
@@ -107,23 +89,6 @@ width:350px;
 border-radius:20px;
 position:relative;
 z-index:2;
-}
-
-/* BOTÃO */
-.btn{
-background:#c9a96e;
-padding:12px 25px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* SEÇÕES */
@@ -135,7 +100,6 @@ display:flex;
 flex-wrap:wrap;
 gap:20px;
 justify-content:center;
-margin-top:30px;
 }
 
 .tratamento{
@@ -144,32 +108,7 @@ padding:25px;
 border-radius:15px;
 width:260px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
-text-align:left;
-transition:0.3s;
 }
-
-.tratamento:hover{transform:translateY(-5px);}
-
-/* PROVA SOCIAL */
-.depoimentos{
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:25px;
-align-items:center;
-}
-
-.depoimento{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-max-width:700px;
-text-align:left;
-}
-
-/* CTA */
-.cta{background:#111;color:#fff;}
 
 /* WHATSAPP */
 .whatsapp{
@@ -180,160 +119,172 @@ background:#25d366;
 padding:15px;
 border-radius:50%;
 color:#fff;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-animation:pulse 1.5s infinite;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+/* BOTÃO FLUTUANTE */
+.smart-btn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#c9a96e;
+color:#fff;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+opacity:0;
+transform:translateY(20px);
+transition:0.4s;
+pointer-events:none;
+z-index:999;
+}
+
+.smart-btn.show{
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
 /* ANIMAÇÃO */
-.hidden{opacity:0;transform:translateY(40px);transition:all 0.8s ease;}
+.hidden{opacity:0;transform:translateY(40px);transition:0.8s;}
 .show{opacity:1;transform:translateY(0);}
 
-/* MOBILE */
-@media(max-width:900px){
-.hero{flex-direction:column;text-align:center;gap:30px;}
-
-.nav-links{
-position:absolute;
-top:60px;
-right:0;
-background:#fff;
-flex-direction:column;
-width:200px;
-padding:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-display:none;
+/* BEFORE AFTER */
+.compare{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
 }
 
-.nav-links.show{display:flex;}
+.compare img{
+width:250px;
+border-radius:10px;
+}
 
-.menu-toggle{display:block;}
+/* FORM */
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center;}
+.nav-links{display:none;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="logo">Aurie Clinic</div>
-
-<div class="menu-toggle">☰</div>
 
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#sobre">Sobre</a>
 <a href="#tratamentos">Tratamentos</a>
-<a href="#blog">Blog</a>
 <a href="#depoimentos">Depoimentos</a>
 <a href="#contato">Contato</a>
 </div>
 
-<a href="https://wa.me/5575981500468" class="btn">Agendar Consulta</a>
+<a href="https://wa.me/5575981500468?text=Olá! Quero agendar minha avaliação" class="btn">Agendar</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero hidden" id="home">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
-<h2>Dra. Juliane Mohamed</h2>
-<p>Realce sua beleza com naturalidade e segurança.</p>
-<a href="https://wa.me/5575981500468" class="btn">Agendar agora</a>
+<p>Realce sua beleza com naturalidade.</p>
+<a href="#contato" class="btn">Agendar agora</a>
 </div>
 
 <div class="foto-doutora">
-<img src="https://i.postimg.cc/02khZ0x6/images.jpg" alt="Doutora">
+<img src="https://i.postimg.cc/02khZ0x6/images.jpg">
 </div>
 </section>
 
 <!-- SOBRE -->
 <section class="hidden" id="sobre">
-<h2>Sobre a Doutora</h2>
-<p style="max-width:700px;margin:auto;color:#666;">
-Especialista em harmonização facial com foco em resultados naturais e personalizados.
-</p>
+<h2>Sobre</h2>
+<p>Especialista em harmonização facial com foco em naturalidade.</p>
 </section>
 
 <!-- TRATAMENTOS -->
 <section class="hidden" id="tratamentos">
 <h2>Tratamentos</h2>
 <div class="tratamentos-grid">
-<div class="tratamento"><h4>Harmonização Facial</h4></div>
-<div class="tratamento"><h4>Fios de PDO</h4></div>
-<div class="tratamento"><h4>Preenchimento</h4></div>
+<div class="tratamento">Harmonização Facial</div>
+<div class="tratamento">Preenchimento</div>
+<div class="tratamento">Botox</div>
 </div>
 </section>
 
-<!-- BLOG -->
-<section class="hidden" id="blog">
-<h2>Blog</h2>
-<p style="color:#777;margin-top:10px;">
-Em breve conteúdos sobre estética e cuidados faciais.
-</p>
-</section>
+<!-- BEFORE AFTER -->
+<section class="hidden">
+<h2>Antes e Depois</h2>
 
-<!-- DEPOIMENTOS -->
-<section class="hidden" id="depoimentos">
-<h2>Depoimentos</h2>
-<div class="depoimentos">
-<div class="depoimento">“Resultado incrível!”</div>
-<div class="depoimento">“Atendimento impecável.”</div>
+<div class="compare">
+<img src="https://i.imgur.com/8Km9tLL.jpg">
+<img src="https://i.imgur.com/1Q9Z1Zb.jpg">
 </div>
 </section>
 
-<!-- CONTATO -->
-<section class="cta hidden" id="contato">
-<h2>Agende sua avaliação</h2>
-<a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
+<!-- FORM -->
+<section class="hidden" id="contato">
+<h2>Agende sua consulta</h2>
+
+<input id="nome" placeholder="Nome">
+<input id="tel" placeholder="WhatsApp">
+<textarea id="msg" placeholder="Mensagem"></textarea>
+
+<button class="btn" onclick="enviar()">Enviar WhatsApp</button>
 </section>
 
-<a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
+<!-- CTA -->
+<section class="hidden">
+<h2>Pronto pra agendar?</h2>
+<a href="https://wa.me/5575981500468" class="btn">Falar no WhatsApp</a>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5575981500468?text=Olá! Quero agendar" class="whatsapp">💬</a>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="#contato" class="smart-btn">Agendar agora</a>
 
 <script>
+
 // animação scroll
-const elements=document.querySelectorAll('.hidden');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting)entry.target.classList.add('show');
+const els=document.querySelectorAll('.hidden');
+const obs=new IntersectionObserver(e=>{
+e.forEach(x=>{
+if(x.isIntersecting)x.target.classList.add('show');
 });
 });
-elements.forEach(el=>observer.observe(el));
+els.forEach(e=>obs.observe(e));
 
-// menu mobile
-const toggle=document.querySelector('.menu-toggle');
-const nav=document.querySelector('.nav-links');
-
-toggle.addEventListener('click',()=>{
-nav.classList.toggle('show');
-});
-
-// highlight menu ativo
-const links=document.querySelectorAll('.nav-links a');
-const sections=document.querySelectorAll('section');
-
+// botão flutuante
+const btn=document.querySelector('.smart-btn');
 window.addEventListener('scroll',()=>{
-let current="";
-sections.forEach(sec=>{
-const top=window.scrollY;
-const offset=sec.offsetTop-120;
-const height=sec.offsetHeight;
-if(top>=offset && top<offset+height){
-current=sec.getAttribute("id");
-}
+btn.classList.toggle('show',window.scrollY>400);
 });
 
-links.forEach(link=>{
-link.classList.remove("active");
-if(link.getAttribute("href")==="#"+current){
-link.classList.add("active");
+// whatsapp form
+function enviar(){
+let n=document.getElementById("nome").value;
+let t=document.getElementById("tel").value;
+let m=document.getElementById("msg").value;
+
+let url=`https://wa.me/5575981500468?text=Nome:%20${n}%0ATel:%20${t}%0AMensagem:%20${m}`;
+
+window.open(url,'_blank');
 }
-});
-});
+
 </script>
 
 </body>
