@@ -48,7 +48,7 @@ padding:0 10%;
 .hero-text h2{font-size:1.2rem;color:#777;margin:10px 0;}
 .hero-text p{color:#666;}
 
-/* FOTO + QUADRO */
+/* FOTO */
 .foto-doutora{
   position:relative;
   display:flex;
@@ -113,6 +113,18 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-5px);
+}
+
+/* ⭐ AVALIAÇÕES EM VERTICAL */
+.reviews .cards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews .card{
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
 }
 
 /* GALERIA */
@@ -200,50 +212,6 @@ Especialista em harmonização facial com foco em resultados naturais e atendime
 </p>
 </section>
 
-<!-- 👇 SOBRE A DOUTORA (ENCAIXADO CORRETAMENTE) -->
-<section class="hidden">
-
-<h2>Sobre a Doutora</h2>
-
-<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
-
-<h3 style="color:#c9a96e;margin-bottom:10px;">Dra. Juliane Mohamed</h3>
-
-<p>
-Médica especialista em harmonização facial, dedicada a realçar a beleza natural de cada paciente com técnicas modernas e resultados harmônicos.
-</p>
-
-<p style="margin-top:10px;">
-Formada em Medicina pela UFBA — CRM-BA 32176
-</p>
-
-<p style="margin-top:15px;font-weight:600;color:#333;">
-Saiba mais sobre a Dra. Juliane →
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h4>⭐ Especialista</h4>
-<p>Especialista em harmonização facial e rejuvenescimento natural.</p>
-</div>
-
-<div class="card">
-<h4>💙 Cuidado</h4>
-<p>Atendimento humanizado, focado em segurança e naturalidade.</p>
-</div>
-
-<div class="card">
-<h4>✨ Inovação</h4>
-<p>Técnicas modernas e tecnologia de ponta em todos os procedimentos.</p>
-</div>
-
-</div>
-
-</section>
-
 <!-- SERVIÇOS -->
 <section class="hidden" style="background:#f5f5f5;">
 <h2>Procedimentos</h2>
@@ -261,6 +229,34 @@ Saiba mais sobre a Dra. Juliane →
 <img src="https://images.unsplash.com/photo-1594824475317-4f3f2d8a0d5e">
 <img src="https://images.unsplash.com/photo-1588776814546-ec7b7c2a1f38">
 <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+</div>
+</section>
+
+<!-- ⭐ AVALIAÇÕES -->
+<section class="hidden reviews">
+
+<h2>O que os pacientes dizem</h2>
+
+<div class="cards">
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>"Fiz preenchimento e o resultado ficou super natural. Atendimento muito atencioso."</p>
+<strong>— Juliana S.</strong>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>"Estava inseguro no começo, mas a Dra explicou tudo e me deixou tranquilo. Resultado perfeito."</p>
+<strong>— Marcos L.</strong>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>"Ninguém percebe que fiz procedimento, ficou extremamente natural."</p>
+<strong>— Camila R.</strong>
+</div>
+
 </div>
 </section>
 
