@@ -48,7 +48,7 @@ padding:0 10%;
 .hero-text h2{font-size:1.2rem;color:#777;margin:10px 0;}
 .hero-text p{color:#666;}
 
-/* FOTO */
+/* FOTO DOUTORA */
 .foto-doutora{
   position:relative;
   display:flex;
@@ -111,9 +111,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
+.card:hover{transform:translateY(-5px);}
 
 /* GALERIA */
 .galeria{
@@ -126,6 +124,41 @@ justify-content:center;
 .galeria img{
 width:250px;
 border-radius:15px;
+transition:0.4s;
+}
+
+.galeria img:hover{
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ANTES E DEPOIS */
+.ba-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.ba-box{
+position:relative;
+width:320px;
+height:320px;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.ba-box img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.ba-box img:first-child{
+clip-path: inset(0 50% 0 0);
 }
 
 /* CTA */
@@ -216,27 +249,14 @@ Saiba mais sobre a Dra. Larissa →
 </div>
 
 <div class="cards">
-
-<div class="card">
-<h4>⭐ Especialista</h4>
-<p>Especialista em face</p>
-</div>
-
-<div class="card">
-<h4>💙 Cuidado</h4>
-<p>Atendimento humanizado e personalizado</p>
-</div>
-
-<div class="card">
-<h4>✨ Inovação</h4>
-<p>Tecnologia de ponta em cada procedimento</p>
-</div>
-
+<div class="card"><h4>⭐ Especialista</h4><p>Especialista em face</p></div>
+<div class="card"><h4>💙 Cuidado</h4><p>Atendimento humanizado e personalizado</p></div>
+<div class="card"><h4>✨ Inovação</h4><p>Tecnologia de ponta em cada procedimento</p></div>
 </div>
 
 </section>
 
-<!-- SERVIÇOS -->
+<!-- PROCEDIMENTOS -->
 <section class="hidden" style="background:#f5f5f5;">
 <h2>Procedimentos</h2>
 <div class="cards">
@@ -246,13 +266,34 @@ Saiba mais sobre a Dra. Larissa →
 </div>
 </section>
 
-<!-- RESULTADOS -->
+<!-- RESULTADOS (GALERIA PREMIUM) -->
 <section class="hidden">
 <h2>Resultados</h2>
+
 <div class="galeria">
-<img src="https://images.unsplash.com/photo-1594824475317-4f3f2d8a0d5e">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7b7c2a1f38">
-<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<img src="https://source.unsplash.com/600x400/?botox,face">
+<img src="https://source.unsplash.com/600x400/?lip,filler">
+<img src="https://source.unsplash.com/600x400/?skin,aesthetic">
+</div>
+
+</section>
+
+<!-- ANTES E DEPOIS -->
+<section class="hidden">
+<h2>Antes e Depois</h2>
+
+<div class="ba-container">
+
+<div class="ba-box">
+<img src="https://source.unsplash.com/600x600/?face,before">
+<img src="https://source.unsplash.com/600x600/?face,after">
+</div>
+
+<div class="ba-box">
+<img src="https://source.unsplash.com/600x600/?lips,before">
+<img src="https://source.unsplash.com/600x600/?lips,after">
+</div>
+
 </div>
 </section>
 
@@ -261,26 +302,11 @@ Saiba mais sobre a Dra. Larissa →
 <h2>O que os pacientes dizem</h2>
 
 <div class="cards">
-
-<div class="card">
-⭐⭐⭐⭐⭐
-<p>"Resultado super natural, atendimento excelente."</p>
-<strong>— Juliana S.</strong>
+<div class="card">⭐⭐⭐⭐⭐<p>"Resultado super natural."</p></div>
+<div class="card">⭐⭐⭐⭐⭐<p>"Atendimento excelente."</p></div>
+<div class="card">⭐⭐⭐⭐⭐<p>"Fiquei impressionado."</p></div>
 </div>
 
-<div class="card">
-⭐⭐⭐⭐⭐
-<p>"Me senti muito seguro durante todo o processo."</p>
-<strong>— Marcos L.</strong>
-</div>
-
-<div class="card">
-⭐⭐⭐⭐⭐
-<p>"Ficou perfeito, ninguém percebe que fiz procedimento."</p>
-<strong>— Camila R.</strong>
-</div>
-
-</div>
 </section>
 
 <!-- CTA -->
@@ -290,19 +316,15 @@ Saiba mais sobre a Dra. Larissa →
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/5575981500468?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar" class="whatsapp">💬</a>
+<a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
 <script>
-const elements = document.querySelectorAll('.hidden');
-
-const observer = new IntersectionObserver((entries)=>{
+const elements=document.querySelectorAll('.hidden');
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
+if(entry.isIntersecting)entry.target.classList.add('show');
 });
 });
-
 elements.forEach(el=>observer.observe(el));
 </script>
 
