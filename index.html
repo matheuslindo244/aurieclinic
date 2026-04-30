@@ -50,28 +50,28 @@ padding:0 10%;
 
 /* FOTO DOUTORA */
 .foto-doutora{
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .foto-doutora::before{
-content:"";
-position:absolute;
-width:420px;
-height:470px;
-background:linear-gradient(135deg,#d4af37,#f5e6a0);
-border-radius:25px;
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
-z-index:1;
+  content:"";
+  position:absolute;
+  width:420px;
+  height:470px;
+  background:linear-gradient(135deg,#d4af37,#f5e6a0);
+  border-radius:25px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+  z-index:1;
 }
 
 .foto-doutora img{
-width:350px;
-border-radius:20px;
-position:relative;
-z-index:2;
+  width:350px;
+  border-radius:20px;
+  position:relative;
+  z-index:2;
 }
 
 /* BOTÃO */
@@ -91,35 +91,39 @@ transform:translateY(-3px);
 box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 section{padding:80px 10%;text-align:center;}
 
-/* CARDS */
-.cards{
+/* TRATAMENTOS */
+.tratamentos-grid{
 display:flex;
-gap:20px;
 flex-wrap:wrap;
+gap:20px;
 justify-content:center;
 margin-top:30px;
 }
 
-.card{
+.tratamento{
 background:#fff;
-padding:20px;
+padding:25px;
 border-radius:15px;
-width:250px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:left;
 transition:0.3s;
 }
 
-.card:hover{transform:translateY(-5px);}
+.tratamento:hover{transform:translateY(-5px);}
 
-/* TITULOS SECUNDÁRIOS */
-.sub{
-max-width:700px;
-margin:0 auto 30px auto;
+.tratamento h4{
+color:#c9a96e;
+margin-bottom:8px;
+}
+
+.tratamento p{
 color:#666;
-line-height:1.6;
+font-size:14px;
+line-height:1.4;
 }
 
 /* GALERIA */
@@ -135,10 +139,10 @@ width:250px;
 border-radius:15px;
 }
 
-/* AVALIAÇÕES */
-.stars{
-color:#f5c542;
-margin-bottom:5px;
+/* CTA */
+.cta{
+background:#111;
+color:#fff;
 }
 
 /* WHATSAPP */
@@ -153,6 +157,67 @@ color:#fff;
 text-decoration:none;
 }
 
+/* PROVA SOCIAL (NOVA AVALIAÇÃO PREMIUM) */
+.prova-social{
+text-align:left;
+max-width:900px;
+margin:auto;
+}
+
+.prova-social h3{
+color:#c9a96e;
+margin-top:10px;
+}
+
+.depoimentos{
+display:flex;
+flex-direction:column;
+gap:20px;
+margin-top:30px;
+}
+
+.depoimento{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.depoimento p{
+font-size:14px;
+color:#555;
+line-height:1.5;
+}
+
+.meta{
+margin-top:10px;
+font-size:13px;
+color:#999;
+}
+
+/* NÚMEROS */
+.stats{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+color:#c9a96e;
+font-size:28px;
+}
+
+.stat p{
+font-size:13px;
+color:#777;
+}
+
 /* ANIMAÇÃO */
 .hidden{
 opacity:0;
@@ -163,12 +228,6 @@ transition:all 0.8s ease;
 .show{
 opacity:1;
 transform:translateY(0);
-}
-
-/* CTA */
-.cta{
-background:#111;
-color:#fff;
 }
 
 /* RESPONSIVO */
@@ -184,100 +243,120 @@ gap:30px;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <div class="logo">Aurie Clinic</div>
 <a href="https://wa.me/5575981500468" class="btn">WhatsApp</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero hidden">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
 <h2>Dra. Juliane Mohamed</h2>
 <p>Realce sua beleza com naturalidade e segurança.</p>
+<p>Atendimento: Caminho das Árvores | Feira de Santana.</p>
 <a href="https://wa.me/5575981500468" class="btn">Agendar agora</a>
 </div>
 
 <div class="foto-doutora">
-<img src="https://i.postimg.cc/02khZ0x6/images.jpg">
+<img src="https://i.postimg.cc/02khZ0x6/images.jpg" alt="Doutora">
 </div>
 </section>
 
-<!-- SOBRE -->
 <section class="hidden">
-<h2>Sobre a Doutora</h2>
-
-<p class="sub">
-Médica especialista em harmonização facial, dedicada a realçar a beleza natural com segurança e precisão.
-Formada em Medicina pela UFBA — CRM-BA 32176
-</p>
-
-<div class="cards">
-<div class="card">⭐ Especialista em face</div>
-<div class="card">💙 Atendimento humanizado</div>
-<div class="card">✨ Tecnologia avançada</div>
-</div>
-</section>
-
-<!-- 🔥 NOVA ABA TRATAMENTOS -->
-<section class="hidden" style="background:#f5f5f5;">
 <h2>Tratamentos</h2>
-<p class="sub">Procedimentos especializados para realçar sua beleza com naturalidade e segurança.</p>
 
-<div class="cards">
+<div class="tratamentos-grid">
 
-<div class="card">
-<h3>Harmonização Facial</h3>
+<div class="tratamento">
+<h4>Harmonização Facial</h4>
 <p>Equilíbrio e proporção para um rosto naturalmente harmonioso.</p>
 </div>
 
-<div class="card">
-<h3>Fios de PDO</h3>
+<div class="tratamento">
+<h4>Fios de PDO</h4>
 <p>Sustentação e rejuvenescimento com técnicas minimamente invasivas.</p>
 </div>
 
-<div class="card">
-<h3>Preenchimento</h3>
+<div class="tratamento">
+<h4>Preenchimento</h4>
 <p>Volume e contorno com ácido hialurônico de alta qualidade.</p>
 </div>
 
-<div class="card">
-<h3>Toxina Botulínica</h3>
+<div class="tratamento">
+<h4>Toxina Botulínica</h4>
 <p>Suavização de linhas de expressão com resultado natural.</p>
 </div>
 
-<div class="card">
-<h3>Bioestimuladores</h3>
-<p>Estímulo à produção natural de colágeno para firmeza e viço.</p>
+<div class="tratamento">
+<h4>Bioestimuladores</h4>
+<p>Estímulo à produção de colágeno para firmeza e viço.</p>
 </div>
 
 </div>
 </section>
 
-<!-- RESULTADOS -->
+<!-- PROVA SOCIAL NOVA -->
 <section class="hidden">
-<h2>Resultados</h2>
 
-<div class="galeria">
-<img src="https://picsum.photos/400/300?1">
-<img src="https://picsum.photos/400/300?2">
-<img src="https://picsum.photos/400/300?3">
+<h2>Prova Social</h2>
+<p style="color:#777;margin-top:10px;">Resultados que falam por si</p>
+<p style="margin-top:10px;font-weight:600;">
+Mais de 500 pacientes confiam na Dra. Larissa Abreu. Nota 5.0 no Google.
+</p>
+
+<div class="depoimentos">
+
+<div class="depoimento">
+<p>"Resultado incrível e super natural! Me sinto muito mais confiante."</p>
+<div class="meta">Carolina S. • Harmonização Facial • Salvador - BA</div>
 </div>
+
+<div class="depoimento">
+<p>"Meus lábios ficaram perfeitos, exatamente como eu queria."</p>
+<div class="meta">Fernanda M. • Preenchimento Labial • Salvador - BA</div>
+</div>
+
+<div class="depoimento">
+<p>"Minha pele rejuvenesceu anos, atendimento impecável."</p>
+<div class="meta">Juliana R. • Toxina Botulínica • Feira de Santana - BA</div>
+</div>
+
+<div class="depoimento">
+<p>"Resultado progressivo e lindo depois do bioestimulador."</p>
+<div class="meta">Patrícia L. • Bioestimulador • Salvador - BA</div>
+</div>
+
+<div class="depoimento">
+<p>"Efeito imediato e natural com fios de PDO."</p>
+<div class="meta">Amanda C. • Fios de PDO • Feira de Santana - BA</div>
+</div>
+
+</div>
+
+<div class="stats">
+<div class="stat">
+<h2>+500</h2>
+<p>Pacientes atendidas</p>
+</div>
+
+<div class="stat">
+<h2>5.0</h2>
+<p>Nota no Google</p>
+</div>
+
+<div class="stat">
+<h2>+200</h2>
+<p>Avaliações 5 estrelas</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>Anos de experiência</p>
+</div>
+</div>
+
 </section>
 
-<!-- AVALIAÇÕES -->
-<section class="hidden">
-<h2>Avaliações</h2>
-
-<div class="cards">
-<div class="card"><div class="stars">⭐⭐⭐⭐⭐</div>"Resultado perfeito."</div>
-<div class="card"><div class="stars">⭐⭐⭐⭐⭐</div>"Atendimento excelente."</div>
-<div class="card"><div class="stars">⭐⭐⭐⭐⭐</div>"Muito profissional."</div>
-</div>
-</section>
-
-<!-- CTA -->
 <section class="cta hidden">
 <h2>Agende sua avaliação</h2>
 <a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
@@ -288,8 +367,8 @@ Formada em Medicina pela UFBA — CRM-BA 32176
 <script>
 const elements=document.querySelectorAll('.hidden');
 const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting)e.target.classList.add('show');
+entries.forEach(entry=>{
+if(entry.isIntersecting)entry.target.classList.add('show');
 });
 });
 elements.forEach(el=>observer.observe(el));
