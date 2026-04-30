@@ -94,6 +94,23 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 /* SECTIONS */
 section{padding:80px 10%;text-align:center;}
 
+/* GALERIA */
+.galeria{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.galeria img{
+width:250px;
+border-radius:15px;
+transition:0.4s;
+}
+
+.galeria img:hover{transform:scale(1.08);}
+
+/* CARDS */
 .cards{
 display:flex;
 gap:20px;
@@ -113,51 +130,74 @@ transition:0.3s;
 
 .card:hover{transform:translateY(-5px);}
 
-/* GALERIA */
-.galeria{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+/* AVALIAÇÕES CARROSSEL */
+.carousel{
+position:relative;
+max-width:600px;
+margin:30px auto;
+overflow:hidden;
 }
 
-.galeria img{
-width:250px;
+.carousel-item{
+display:none;
+padding:25px;
+background:#fff;
 border-radius:15px;
-transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.galeria img:hover{
-transform:scale(1.08);
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+.carousel-item.active{
+display:block;
+animation:fade 0.6s ease;
 }
 
-/* ANTES E DEPOIS */
-.ba-container{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-margin-top:30px;
+@keyframes fade{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-.ba-box{
+/* STARS */
+.stars{
+color:#f5c542;
+margin-bottom:10px;
+}
+
+/* CONTADOR */
+.counter{
+font-size:2.2rem;
+font-weight:600;
+color:#c9a96e;
+margin:10px 0;
+}
+
+/* BEFORE AFTER SLIDER */
+.ba{
 position:relative;
 width:320px;
 height:320px;
 overflow:hidden;
 border-radius:20px;
+margin:auto;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.ba-box img{
+.ba img{
 position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
 }
 
-.ba-box img:first-child{
+.ba input{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+cursor:ew-resize;
+z-index:3;
+}
+
+.ba .after{
 clip-path: inset(0 50% 0 0);
 }
 
@@ -204,121 +244,81 @@ gap:30px;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <div class="logo">Aurie Clinic</div>
 <a href="https://wa.me/5575981500468" class="btn">WhatsApp</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero hidden">
 <div class="hero-text">
 <h1>Harmonização Facial | Salvador</h1>
 <h2>Dra. Juliane Mohamed</h2>
 <p>Realce sua beleza com naturalidade e segurança.</p>
-<p>Atendimento: Caminho das Árvores (Salvador) | Centro (Feira de Santana).</p>
 <a href="https://wa.me/5575981500468" class="btn">Agendar agora</a>
 </div>
 
 <div class="foto-doutora">
-<img src="https://i.postimg.cc/02khZ0x6/images.jpg" alt="Doutora">
+<img src="https://i.postimg.cc/02khZ0x6/images.jpg">
 </div>
 </section>
 
-<!-- SOBRE A DOUTORA -->
+<!-- CONTADOR -->
 <section class="hidden">
-
-<h2>Sobre a Doutora</h2>
-
-<div style="max-width:700px;margin:auto;text-align:left;line-height:1.6;color:#555;">
-
-<h3 style="color:#c9a96e;margin-bottom:10px;">Dra. Larissa Abreu</h3>
-
-<p>
-Médica especialista em harmonização facial, a Dra. Larissa Abreu dedica-se a realçar a beleza natural de cada paciente com técnicas inovadoras e resultados harmoniosos.
-</p>
-
-<p style="margin-top:10px;">
-Formada em Medicina pela UFBA — CRM-BA 32176
-</p>
-
-<p style="margin-top:15px;font-weight:600;color:#333;">
-Saiba mais sobre a Dra. Larissa →
-</p>
-
-</div>
-
-<div class="cards">
-<div class="card"><h4>⭐ Especialista</h4><p>Especialista em face</p></div>
-<div class="card"><h4>💙 Cuidado</h4><p>Atendimento humanizado e personalizado</p></div>
-<div class="card"><h4>✨ Inovação</h4><p>Tecnologia de ponta em cada procedimento</p></div>
-</div>
-
+<h2>Pacientes atendidos</h2>
+<div class="counter" id="counter">0</div>
+<p>Resultados naturais e seguros</p>
 </section>
 
-<!-- PROCEDIMENTOS -->
-<section class="hidden" style="background:#f5f5f5;">
-<h2>Procedimentos</h2>
-<div class="cards">
-<div class="card">Botox</div>
-<div class="card">Preenchimento</div>
-<div class="card">Bioestimulador</div>
-</div>
-</section>
-
-<!-- RESULTADOS (GALERIA PREMIUM) -->
+<!-- AVALIAÇÕES CARROSSEL -->
 <section class="hidden">
-<h2>Resultados</h2>
+<h2>Avaliações</h2>
 
-<div class="galeria">
-<img src="https://source.unsplash.com/600x400/?botox,face">
-<img src="https://source.unsplash.com/600x400/?lip,filler">
-<img src="https://source.unsplash.com/600x400/?skin,aesthetic">
+<div class="carousel">
+
+<div class="carousel-item active">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Resultado perfeito e muito natural."</p>
 </div>
+
+<div class="carousel-item">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Atendimento impecável do início ao fim."</p>
+</div>
+
+<div class="carousel-item">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Fiquei muito satisfeito com o resultado."</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/5575981500468?text=Quero%20avaliar%20o%20atendimento" class="btn">
+Avaliar no WhatsApp
+</a>
 
 </section>
 
-<!-- ANTES E DEPOIS -->
+<!-- BEFORE AFTER -->
 <section class="hidden">
 <h2>Antes e Depois</h2>
 
-<div class="ba-container">
-
-<div class="ba-box">
-<img src="https://source.unsplash.com/600x600/?face,before">
-<img src="https://source.unsplash.com/600x600/?face,after">
-</div>
-
-<div class="ba-box">
-<img src="https://source.unsplash.com/600x600/?lips,before">
-<img src="https://source.unsplash.com/600x600/?lips,after">
-</div>
-
-</div>
-</section>
-
-<!-- AVALIAÇÕES -->
-<section class="hidden">
-<h2>O que os pacientes dizem</h2>
-
-<div class="cards">
-<div class="card">⭐⭐⭐⭐⭐<p>"Resultado super natural."</p></div>
-<div class="card">⭐⭐⭐⭐⭐<p>"Atendimento excelente."</p></div>
-<div class="card">⭐⭐⭐⭐⭐<p>"Fiquei impressionado."</p></div>
+<div class="ba">
+<img src="https://picsum.photos/600/600?random=1">
+<img class="after" src="https://picsum.photos/600/600?random=2">
+<input type="range" min="0" max="100" value="50" oninput="document.querySelector('.after').style.clipPath='inset(0 '+this.value+'% 0 0)'">
 </div>
 
 </section>
 
-<!-- CTA -->
 <section class="cta hidden">
 <h2>Agende sua avaliação</h2>
 <a href="https://wa.me/5575981500468" class="btn">Quero agendar</a>
 </section>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
 <script>
+// ANIMAÇÃO SCROLL
 const elements=document.querySelectorAll('.hidden');
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -326,6 +326,30 @@ if(entry.isIntersecting)entry.target.classList.add('show');
 });
 });
 elements.forEach(el=>observer.observe(el));
+
+// CARROSSEL
+let index=0;
+const items=document.querySelectorAll('.carousel-item');
+
+setInterval(()=>{
+items[index].classList.remove('active');
+index=(index+1)%items.length;
+items[index].classList.add('active');
+},3000);
+
+// CONTADOR
+let count=0;
+const counter=document.getElementById("counter");
+const target=327;
+
+function update(){
+if(count<target){
+count++;
+counter.innerText="+"+count;
+requestAnimationFrame(update);
+}
+}
+update();
 </script>
 
 </body>
