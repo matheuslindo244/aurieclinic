@@ -94,80 +94,40 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 /* SECTIONS */
 section{padding:80px 10%;text-align:center;}
 
-/* FORMULÁRIO NOVO */
-.form-area{
-max-width:600px;
-margin:auto;
-text-align:left;
-background:#fff;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-margin-top:25px;
-}
-
-.form-area label{
-display:block;
-margin-top:15px;
-font-weight:600;
-color:#555;
-font-size:14px;
-}
-
-.form-area input,
-.form-area textarea{
-width:100%;
-padding:12px;
-margin-top:6px;
-border-radius:10px;
-border:1px solid #ddd;
-outline:none;
-font-family:Poppins;
-}
-
-.form-area textarea{
-resize:none;
-height:100px;
-}
-
-.form-area button{
-margin-top:20px;
-width:100%;
-border:none;
-cursor:pointer;
-}
-
-/* TRATAMENTOS */
-.tratamentos-grid{
+.cards{
 display:flex;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
 justify-content:center;
 margin-top:30px;
 }
 
-.tratamento{
+.card{
 background:#fff;
-padding:25px;
+padding:20px;
 border-radius:15px;
-width:260px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-text-align:left;
+width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.tratamento:hover{transform:translateY(-5px);}
+.card:hover{transform:translateY(-5px);}
 
-.tratamento h4{
-color:#c9a96e;
-margin-bottom:8px;
+/* GALERIA */
+.galeria{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.tratamento p{
-color:#666;
-font-size:14px;
-line-height:1.4;
+.galeria img{
+width:250px;
+border-radius:15px;
+transition:0.4s;
 }
+
+.galeria img:hover{transform:scale(1.08);}
 
 /* CTA */
 .cta{
@@ -197,6 +157,34 @@ transition:all 0.8s ease;
 .show{
 opacity:1;
 transform:translateY(0);
+}
+
+/* FORMULÁRIO */
+.formulario{
+max-width:600px;
+margin:auto;
+text-align:left;
+background:#f7f7f7;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.formulario input,
+.formulario textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+}
+
+.formulario h2{
+text-align:center;
+margin-bottom:10px;
+color:#c9a96e;
 }
 
 /* RESPONSIVO */
@@ -231,20 +219,17 @@ gap:30px;
 </div>
 </section>
 
-<!-- NOVA SEÇÃO ENCAIXADA -->
+<!-- FORMULÁRIO NOVO (ADICIONADO SEM MEXER NO RESTO) -->
 <section class="hidden">
+
+<div class="formulario">
 
 <h2>Dê o primeiro passo</h2>
 
-<h3 style="margin-top:10px;color:#c9a96e;">
-Agende sua Avaliação Personalizada
-</h3>
-
-<p style="max-width:600px;margin:10px auto;color:#666;">
-Preencha abaixo e nossa equipe entrará em contato pelo WhatsApp para agendar sua consulta com a Dra. Larissa Abreu.
+<p style="text-align:center;margin-bottom:20px;">
+Agende sua Avaliação Personalizada<br>
+Preencha abaixo e nossa equipe entrará em contato pelo WhatsApp.
 </p>
-
-<div class="form-area">
 
 <label>Nome *</label>
 <input type="text" placeholder="Seu nome completo">
@@ -253,9 +238,9 @@ Preencha abaixo e nossa equipe entrará em contato pelo WhatsApp para agendar su
 <input type="text" placeholder="(00) 00000-0000">
 
 <label>O que deseja melhorar?</label>
-<textarea placeholder="Ex: rugas, volume labial, contorno facial..."></textarea>
+<textarea rows="4" placeholder="Ex: rugas, volume labial, contorno facial..."></textarea>
 
-<a href="https://wa.me/5575981500468?text=Quero%20minha%20melhor%20vers%C3%A3o" class="btn">
+<a href="https://wa.me/5575981500468" class="btn" style="width:100%;text-align:center;">
 Quero minha melhor versão
 </a>
 
