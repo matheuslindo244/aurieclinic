@@ -59,6 +59,8 @@ align-items:center;
 padding:15px 10%;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
+
+transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media(max-width:900px){
@@ -535,14 +537,23 @@ Quero agendar
 
 <a href="https://wa.me/5575981500468" class="whatsapp">💬</a>
 
+
 <script>
-const elements=document.querySelectorAll('.hidden');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting)entry.target.classList.add('show');
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+  let scroll = window.scrollY;
+
+  if (scroll > 50) {
+    nav.style.background = "rgba(255,255,255,0.6)";
+    nav.style.backdropFilter = "blur(12px)";
+    nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.05)";
+  } else {
+    nav.style.background = "#fff";
+    nav.style.backdropFilter = "none";
+    nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.05)";
+  }
 });
-});
-elements.forEach(el=>observer.observe(el));
 </script>
 
 </body>
